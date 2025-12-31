@@ -162,6 +162,9 @@ Dhulikhel‑4, Kavrepalanchok, Nepal
 
 **Developer:** Dhulikhel Hospital, Research and Development Division, Data Manager Team
 **In Collaboration With:** Pharmacovigilance and Drug Counselling Unit, Department of Pharmacotherapeutics and Toxicology, Dhulikhel Hospital
-**Developer Team:** -Sandip Parajuli, Research and Development, Dhulikhel Hospital
-                    -Sanjit Kumar Makaju, Research and Development, Dhulikhel Hospital
-                    -Sanjay Rumba, Research and Development, Dhulikhel Hospital
+
+**Developer Team:** 
+- Sandip Parajuli, Research and Development, Dhulikhel Hospital
+- Sanjit Kumar Makaju, Research and Development, Dhulikhel Hospital
+- Sanjay Rumba, Research and Development, Dhulikhel Hospital
+                    
