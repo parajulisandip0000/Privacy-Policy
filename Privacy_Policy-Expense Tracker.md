@@ -10,7 +10,7 @@ If you do not agree with this policy, do not use the App.
 
 The App may collect the following information, depending on the features you use:
 
-- **SMS messages**: If you grant SMS permission, the App reads financial SMS messages on your device to detect deposits, withdrawals, refunds, fees, balance alerts, and similar transaction activity.
+- **SMS messages**: If you grant SMS permission, the App reads financial SMS messages on your device to detect deposits, withdrawals, refunds, fees, balance alerts, transfers, and similar transaction activity.
 - **Transaction data**: Manually entered transactions, imported transaction details, categories, notes, due items, and review decisions.
 - **Account information**: If you sign in, the App may use your email address, display name, and unique account identifier from Firebase Authentication or Google Sign-In.
 - **Device information**: The App generates and stores a device identifier for local app operations and sync.
@@ -28,12 +28,15 @@ We use the information above to:
 
 ## SMS Handling
 
-The App requests `READ_SMS` permission so it can scan your inbox locally and identify financial messages.
+The App requests `READ_SMS` and `RECEIVE_SMS` permission so it can detect eligible financial SMS messages and import transaction activity automatically.
 
-- SMS scanning happens on your device.
-- The App is designed to read only messages that match financial patterns.
+- `RECEIVE_SMS` is used to detect when a new SMS arrives so the App can trigger an automatic import.
+- `READ_SMS` is used to scan your inbox locally for SMS messages that match financial patterns.
+- The App is designed to access only SMS content needed for money-management features such as tracking deposits, debits, refunds, fees, transfers, and balance alerts.
 - Raw SMS messages are stored locally in the App database and may be encrypted at rest on the device.
 - If cloud sync is enabled, the App may upload encrypted SMS content and related metadata to your Firebase account so your data can be restored on another signed-in device.
+- The App does not read call logs, does not send SMS, and does not function as the default SMS app, default phone app, or default assistant app.
+- SMS data is not used for advertising, marketing, or user profiling.
 
 ## How We Share Information
 
@@ -59,7 +62,7 @@ No online system is completely secure, but we take reasonable measures to protec
 
 ## Data Retention
 
-We keep data as long as needed to provide the App’s features.
+We keep data as long as needed to provide the App's features.
 
 - Local data remains on your device until you delete it, clear app data, or uninstall the App.
 - If sync is enabled, cloud data remains in your Firebase account until you delete it or otherwise remove it from the App.
@@ -76,15 +79,18 @@ You can control your data in these ways:
 - Export your data for backup or review
 - Uninstall the App to remove local data from your device
 
+If you deny SMS permissions, the App remains usable for manual entry and other non-SMS features, but automatic SMS-based transaction import will not work.
+
 ## Permissions Used
 
 The App currently uses these Android permissions:
 
 - `READ_SMS`
+- `RECEIVE_SMS`
 - `RECEIVE_BOOT_COMPLETED`
 - `INTERNET`
 
-The App does not intentionally request camera, microphone, or location permissions in this version.
+The App does not intentionally request call log, camera, microphone, or location permissions in this version.
 
 ## Children's Privacy
 
