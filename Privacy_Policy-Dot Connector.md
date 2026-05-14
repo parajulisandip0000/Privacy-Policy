@@ -20,6 +20,8 @@ We may collect non-personal information automatically, such as:
 *   Device model and OS version
 *   Unique device identifiers
 *   Crash reports and performance data
+### d. Local Notifications
+With your permission, we use local notifications to send you daily reminders (e.g., at 11 AM, 1 PM, and 8 PM) to complete your Daily Challenge or continue your progress. These are handled entirely on your device.
 
 ## 2. How We Use Your Information
 *   **To provide and maintain the Service**: To manage your account and sync your progress.
